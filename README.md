@@ -12,18 +12,20 @@ brad-frost-clone
 ├── public
 ├── src
 │   ├── app
-│   │   ├── blog
-│   │   │   └── page.tsx
-│   │   ├── book
-│   │   │   └── page.tsx
+        ├── pages
+│   │   |  ├── blog
+│   │   │     └── page.tsx
+│   │   |  ├── book
+│   │   │     └── page.tsx
+│   |   |  ├── contact
+│   │   |      └── page.tsx
+│   |   |  └── work
+│   |   |      └── page.tsx
 │   │   └── components
 │   │       ├── card.tsx
 │   │       ├── footer.tsx
 │   │       └── navbar.tsx
-│   ├── contact
-│   │   └── page.tsx
-│   └── work
-│       └── page.tsx
+|
 ├── favicon.ico
 ├── globals.css
 ├── layout.tsx
