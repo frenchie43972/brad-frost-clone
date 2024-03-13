@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+// import React from "react";
 
 // Defines two types for the Nav Links; one for the name and one for the URL path
 type NavLink = {
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     <Link
       // A key is required by React in order to efficiently re-render list items 
       key={link.name} 
-      href={link.href}
+      href={`/pages/${link.href}`}
       className="hover:text-[#be6700] hover:underline underline-offset-8 decoration-black decoration-4"
     >
       {link.name}
@@ -31,10 +31,12 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <header className="absolute text-[#a29e5e] top-0 right-0 z-10 mt-1 mr-3 p-1">
+    <header className="absolute text-[#a29e5e] top-0 right-0 z-10 mt-1 mr-4 p-1">
       <span className="text-[8.5px] text-slate-950  ml-7">my name is</span>
       <Link className="flex flex-col hover:text-[#be6700] items-end mb-5 -mt-2" href={`/`} rel="brad home">
-        <span className="">brad frost</span> 
+        <span className="hover:text-[#be6700] hover:underline underline-offset-8 decoration-black decoration-4">
+          brad frost
+        </span> 
       </Link>
       <nav className="flex flex-col items-end space-y-1.5">
         {/* Maps through navLinks and will render each dynamically, keeping the code clean */}
@@ -44,6 +46,7 @@ const Navbar: React.FC = () => {
   );
 };
 
+// My original code. I used ChatGPt to help refactor the code  
 
 // const Navbar: React.FC = () => {
 //     return (
@@ -64,5 +67,5 @@ const Navbar: React.FC = () => {
 //     );
 // };
 
-// export default Navbar;
+export default Navbar;
 
